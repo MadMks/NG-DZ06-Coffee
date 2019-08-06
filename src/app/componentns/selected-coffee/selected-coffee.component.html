@@ -1,0 +1,20 @@
+<button mat-button routerLink="/">Назад</button>
+<br/>
+<label>
+  Количество порций кофе:
+  <input matInput type="number" value="1" [(ngModel)]="countCoffee">
+</label>
+<div *ngFor="let item of currentCoffee">
+  <mat-card>
+    <h1>{{item.title}}</h1>
+    <img src='{{item.img}}' alt="img"/>
+    <p>{{item.price}} грн.</p>
+  </mat-card>
+
+  <label>
+    <input type="range" min="0" max="5">
+  </label>
+</div>
+
+
+<button mat-button routerLink="/" (click)="addCard()">Добавить в коризну</button>
