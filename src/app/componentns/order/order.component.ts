@@ -7,7 +7,7 @@ import {DataCoffeeService} from '../../dataCoffee.service';
   styleUrls: ['./order.component.css']
 })
 export class OrderComponent implements OnInit {
-
+  displayedColumns: string[] = ['name', 'price'];
   listOrder;
   constructor(private dataService: DataCoffeeService) {
     this.listOrder = this.dataService.orderCoffee;

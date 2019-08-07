@@ -15,6 +15,7 @@ import {FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material';
 import { OrderComponent } from './componentns/order/order.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatSliderModule,
     FormsModule,
     MatInputModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTableModule
   ],
   providers: [DataCoffeeService],
   bootstrap: [AppComponent]
