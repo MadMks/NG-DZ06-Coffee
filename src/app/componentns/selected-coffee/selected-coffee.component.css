@@ -1,0 +1,32 @@
+.preview img{
+    height: 100%;
+}
+.preview{
+    height: 100%;
+    display: block;
+    opacity: 1;
+    -webkit-transform: scale(1,1);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 550ms;
+    -moz-transform: scale(1,1);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 550ms;
+}
+.preview:hover {
+    /*height: auto;*/
+    -webkit-transform: scale(5,5);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 550ms;
+    -moz-transform: scale(5,5);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 550ms;
+    box-shadow: 1px 1px 7px -3px rgba(0,0,0,0.75);
+}
+.tile-preview:hover{
+    overflow: visible;
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 550ms;
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 550ms;
+    z-index: 100;
+}

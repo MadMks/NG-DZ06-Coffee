@@ -4,17 +4,37 @@
   Количество порций кофе:
   <input matInput type="number" value="1" [(ngModel)]="countCoffee">
 </label>
+<!--<div *ngFor="let item of currentCoffee">-->
+<!--  <mat-card>-->
+<!--    <h1>{{item.title}}</h1>-->
+<!--    <img src='{{item.img}}' alt="img"/>-->
+<!--    <p>{{item.price}} грн.</p>-->
+<!--  </mat-card>-->
+
+<!--  <label>-->
+<!--    <input type="range" min="0" max="5">-->
+<!--  </label>-->
+<!--</div>-->
+<hr>
 <div *ngFor="let item of currentCoffee">
   <mat-card>
-    <h1>{{item.title}}</h1>
-    <img src='{{item.img}}' alt="img"/>
-    <p>{{item.price}} грн.</p>
+    <mat-grid-list cols="4" rowHeight="8:1">
+      <mat-grid-tile>{{item.title}}</mat-grid-tile>
+      <mat-grid-tile class="tile-preview">
+        <div class="preview">
+          <img src='{{item.img}}' alt="img"/>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>{{item.price}} грн.</mat-grid-tile>
+      <mat-grid-tile>
+        <label>
+          Кол-во сахара:
+          <input type="range" min="0" max="5">
+        </label>
+      </mat-grid-tile>
+    </mat-grid-list>
   </mat-card>
-
-  <label>
-    <input type="range" min="0" max="5">
-  </label>
 </div>
-
-
+<hr>
 <button mat-button routerLink="/" (click)="addCard()">Добавить в коризну</button>
+

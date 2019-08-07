@@ -10,24 +10,24 @@ export class DataCoffeeService {
 
   arrayCoffee = [
     {
-      img: 'assets/Image/Layer 1.jpg',
-      title: 'Эспресо',
-      price: 100
+      img: 'assets/Image/1.jpg',
+      title: 'Эспрессо',
+      price: 10
     },
     {
-      img: 'assets/Image/Layer 2.jpg',
-      title: 'Американо',
-      price: 200
+      img: 'assets/Image/2.jpg',
+      title: 'Доппио',
+      price: 20
     },
     {
-      img: 'assets/Image/Layer 1.jpg',
-      title: 'Эспресо',
-      price: 100
+      img: 'assets/Image/3.jpg',
+      title: 'Кофе по Венски',
+      price: 30
     },
     {
-      img: 'assets/Image/Layer 2.jpg',
-      title: 'Американо',
-      price: 200
+      img: 'assets/Image/4.jpg',
+      title: 'Романо',
+      price: 40
     }
   ];
 
