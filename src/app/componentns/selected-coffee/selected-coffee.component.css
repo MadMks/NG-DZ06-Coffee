@@ -30,3 +30,7 @@
     -moz-transition-duration: 550ms;
     z-index: 100;
 }
+.range-sugar{
+    width: 60px;
+    margin-left: 15px;
+}

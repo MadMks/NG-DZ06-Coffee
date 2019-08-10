@@ -2,21 +2,12 @@
 <br/>
 <label>
   Количество порций кофе:
-  <input matInput type="number" value="1" [(ngModel)]="countCoffee">
+  <input matInput type="number" value="1" [(ngModel)]="countCoffee"
+  (input)="countChange()">
 </label>
-<!--<div *ngFor="let item of currentCoffee">-->
-<!--  <mat-card>-->
-<!--    <h1>{{item.title}}</h1>-->
-<!--    <img src='{{item.img}}' alt="img"/>-->
-<!--    <p>{{item.price}} грн.</p>-->
-<!--  </mat-card>-->
 
-<!--  <label>-->
-<!--    <input type="range" min="0" max="5">-->
-<!--  </label>-->
-<!--</div>-->
 <hr>
-<div *ngFor="let item of currentCoffee">
+<div *ngFor="let item of currentCoffee; let i = index">
   <mat-card>
     <mat-grid-list cols="4" rowHeight="8:1">
       <mat-grid-tile>{{item.title}}</mat-grid-tile>
@@ -29,7 +20,8 @@
       <mat-grid-tile>
         <label>
           Кол-во сахара:
-          <input type="range" min="0" max="5">
+          <input type="range" min="0" max="5"
+                  class="range-sugar" (input)="addSugar($event.value, i)">
         </label>
       </mat-grid-tile>
     </mat-grid-list>
