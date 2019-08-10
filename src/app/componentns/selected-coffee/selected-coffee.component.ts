@@ -12,23 +12,39 @@ export class SelectedCoffeeComponent implements OnInit, AfterContentChecked {
   id: string;
   currentCoffee = [];
   countCoffee = 1;
-  // countPortions = 1;
+  arrSugar = [];
   private lastCountCoffee = 1;
 
   constructor(private activeRoute: ActivatedRoute, private dataService: DataCoffeeService) {
     this.id = activeRoute.snapshot.params.id;
 
-    this.addCoffeeInOrder();
+    this.addCoffeeInOrder(this.countCoffee);
   }
 
   ngOnInit() {
 
   }
 
-  addCoffeeInOrder() {
+  addCoffeeInOrder(count: number) {
     const obj = this.dataService.getCoffeeObj(this.id);
-    obj['sugar'] = 0;
-    this.currentCoffee.push(obj);
+
+    for ( let i = 0; i < count; i++) {
+      const tempObjCoffee = {
+        title: '',
+        img: '',
+        price: 0,
+        sugar: 0
+      };
+      // Копируем начальные данные кофе в новый обьект
+      tempObjCoffee.title = obj.title;
+      tempObjCoffee.img = obj.img;
+      tempObjCoffee.price = obj.price;
+      tempObjCoffee.sugar = 0;
+      // Добавляем кофе в заказ
+      this.currentCoffee.push(tempObjCoffee);
+      // Записываем начальное кол-во сахара в доп массив для вывода
+      this.arrSugar.push(0);
+    }
   }
   ngAfterContentChecked() {
     // this.currentCoffee = [];
@@ -39,25 +55,30 @@ export class SelectedCoffeeComponent implements OnInit, AfterContentChecked {
 
   countChange() {
     const objCoffee = this.dataService.getCoffeeObj(this.id);
-    console.log(1);
+    // Удаление кофе и сахара (из доп массива)
     if ( this.lastCountCoffee > this.countCoffee) {
       this.currentCoffee.splice(this.countCoffee);
-      console.log(2);
+      this.arrSugar.splice(this.countCoffee);
+    // Добавление кофе
     } else if (this.lastCountCoffee < this.countCoffee) {
-      // this.currentCoffee.push(objCoffee);
-      console.log(3);
-      this.addCoffeeInOrder();
+      const countAdd = this.countCoffee - this.lastCountCoffee;
+      this.addCoffeeInOrder(countAdd);
+      // Записываем новое значение сахара
+      this.lastCountCoffee = this.countCoffee;
     }
-    console.log(4);
-    this.lastCountCoffee = this.countCoffee;
+
+
   }
 
   addCard() {
+    console.log(this.currentCoffee);
     this.dataService.addOrderCoffee(this.currentCoffee);
     // this.router.navigate(['./']);
   }
 
   addSugar(count: number, index: number) {
+    this.currentCoffee[index].sugar = count;
 
+    this.arrSugar[index] = count;
   }
 }

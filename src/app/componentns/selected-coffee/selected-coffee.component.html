@@ -19,9 +19,9 @@
       <mat-grid-tile>{{item.price}} грн.</mat-grid-tile>
       <mat-grid-tile>
         <label>
-          Кол-во сахара:
-          <input type="range" min="0" max="5"
-                  class="range-sugar" (input)="addSugar($event.value, i)">
+          Кол-во сахара: {{arrSugar[i]}}
+          <input type="range" min="0" max="5" value="0"
+                  class="range-sugar" (input)="addSugar($event.target.value, i)">
         </label>
       </mat-grid-tile>
     </mat-grid-list>
