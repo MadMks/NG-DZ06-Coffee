@@ -13,3 +13,18 @@ mat-card-actions{
     color: #4a1d00;
     font-size: 1.6rem;
 }
+.btn-card::before{
+    content: "";
+    background-image: url('/assets/Image/basket.png');
+    background-size: cover;
+    position: absolute;
+    width: 30px;
+    height: 33px;
+    left: 7px;
+    top: 1px;
+}
+.btn-card {
+    padding-left: 50px;
+    color: #4a1d00;
+    font-weight: bold;
+}
