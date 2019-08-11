@@ -13,7 +13,6 @@
     -moz-transition-duration: 550ms;
 }
 .preview:hover {
-    /*height: auto;*/
     -webkit-transform: scale(5,5);
     -webkit-transition-timing-function: ease-out;
     -webkit-transition-duration: 550ms;

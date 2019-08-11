@@ -9,3 +9,7 @@ mat-card-actions{
     height: auto;
     margin: auto;
 }
+.card-coffee h1{
+    color: #4a1d00;
+    font-size: 1.6rem;
+}

@@ -47,14 +47,9 @@ export class SelectedCoffeeComponent implements OnInit, AfterContentChecked {
     }
   }
   ngAfterContentChecked() {
-    // this.currentCoffee = [];
-    // for (let i = 0; i < this.countCoffee; i++) {
-    //   this.currentCoffee.push(this.dataService.getCoffeeObj(this.id));
-    // }
   }
 
   countChange() {
-    const objCoffee = this.dataService.getCoffeeObj(this.id);
     // Удаление кофе и сахара (из доп массива)
     if ( this.lastCountCoffee > this.countCoffee) {
       this.currentCoffee.splice(this.countCoffee);
@@ -66,14 +61,11 @@ export class SelectedCoffeeComponent implements OnInit, AfterContentChecked {
       // Записываем новое значение сахара
       this.lastCountCoffee = this.countCoffee;
     }
-
-
   }
 
   addCard() {
     console.log(this.currentCoffee);
     this.dataService.addOrderCoffee(this.currentCoffee);
-    // this.router.navigate(['./']);
   }
 
   addSugar(count: number, index: number) {

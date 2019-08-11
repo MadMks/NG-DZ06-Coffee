@@ -2,16 +2,16 @@
   <button mat-button routerLink='/order' class="btn-card">Корзина</button>
 </div>
 
-<mat-grid-list cols="2" rowHeight="1:1">
+<mat-grid-list cols="3" rowHeight="1:1">
 
   <mat-grid-tile *ngFor="let item of list; let i = index">
-    <mat-card class="example-card">
-      <img mat-card-image src='{{item.img}}' alt="Photo of a Shiba Inu">
+    <mat-card class="example-card card-coffee">
+      <img mat-card-image src='{{item.img}}' alt="">
       <mat-card-content>
         <h1>{{item.title}} - {{item.price}} грн</h1>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button [routerLink]="['/selected-coffee',i]">Заказать</button>
+        <button mat-button [routerLink]="['/selected-coffee',i]">Добавить</button>
       </mat-card-actions>
     </mat-card>
   </mat-grid-tile>

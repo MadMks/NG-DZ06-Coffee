@@ -24,5 +24,4 @@ export class OrderComponent implements OnInit {
     }
     return totalCost;
   }
-
 }
