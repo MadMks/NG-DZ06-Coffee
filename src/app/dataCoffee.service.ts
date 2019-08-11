@@ -28,6 +28,31 @@ export class DataCoffeeService {
       img: 'assets/Image/4.jpg',
       title: 'Романо',
       price: 40
+    },
+    {
+      img: 'assets/Image/5.jpg',
+      title: 'Ристретто',
+      price: 50
+    },
+    {
+      img: 'assets/Image/6.jpg',
+      title: 'Лунго',
+      price: 60
+    },
+    {
+      img: 'assets/Image/7.jpg',
+      title: 'Американо',
+      price: 70
+    },
+    {
+      img: 'assets/Image/8.jpg',
+      title: 'Маккиато',
+      price: 80
+    },
+    {
+      img: 'assets/Image/9.jpg',
+      title: 'Кон панна',
+      price: 90
     }
   ];
 

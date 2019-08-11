@@ -2,7 +2,7 @@
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 body{
-  background-image: url(assets/Image/Background.jpg);
+  background-image: url('assets/Image/Background.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
