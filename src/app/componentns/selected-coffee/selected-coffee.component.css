@@ -34,3 +34,21 @@
     width: 60px;
     margin-left: 15px;
 }
+
+input[type=number] {
+    width: 35px;
+    padding: 5px 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    /*-webkit-appearance: none;*/
+    margin: 0;
+}
+.btn-addOrder{
+    float: right;
+}
+.btn-back{
+    margin-bottom: 8px;
+}
+

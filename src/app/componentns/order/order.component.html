@@ -1,8 +1,3 @@
-<!--<ul>-->
-<!--  <li *ngFor="let item of listOrder">-->
-<!--    {{item.title}} &ndash;&gt; {{item.price}}-->
-<!--  </li>-->
-<!--</ul>-->
 <button mat-button routerLink="/">Назад</button>
 <br/>
 <hr>
@@ -44,7 +39,11 @@
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
 
+<mat-card class="example-card total-cost">
+  <mat-card-content>
+    <span>Всего: {{getTotalCost()}} грн.</span>
+  </mat-card-content>
+</mat-card>
 
-
-
-<button mat-button routerLink="/">Заказать</button>
+<hr>
+<button mat-button routerLink="/" class="btn-order">Заказать</button>

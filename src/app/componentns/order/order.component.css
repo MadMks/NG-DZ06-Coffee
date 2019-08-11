@@ -1,3 +1,15 @@
 table {
     width: 100%;
 }
+.total-cost{
+    margin-top: 20px;
+}
+.total-cost span{
+    margin-right: 50px;
+}
+.total-cost .mat-card-content{
+    text-align: right;
+}
+.btn-order{
+    float: right;
+}

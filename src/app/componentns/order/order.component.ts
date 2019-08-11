@@ -16,4 +16,13 @@ export class OrderComponent implements OnInit {
   ngOnInit() {
   }
 
+  getTotalCost() {
+    let totalCost = 0;
+    // tslint:disable-next-line:prefer-for-of
+    for (let i = 0; i < this.listOrder.length; i++) {
+      totalCost = totalCost + this.listOrder[i].price;
+    }
+    return totalCost;
+  }
+
 }

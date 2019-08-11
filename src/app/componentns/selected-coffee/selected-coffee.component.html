@@ -1,9 +1,12 @@
-<button mat-button routerLink="/">Назад</button>
+<button mat-button routerLink="/" class="btn-back">Назад</button>
 <br/>
 <label>
-  Количество порций кофе:
-  <input matInput type="number" value="1" [(ngModel)]="countCoffee"
-  (input)="countChange()">
+  <mat-card>
+    Количество порций кофе:
+    <input matInput type="number" value="1" min="0" max="15" step="1"
+           [(ngModel)]="countCoffee"
+           (input)="countChange()">
+  </mat-card>
 </label>
 
 <hr>
@@ -28,5 +31,6 @@
   </mat-card>
 </div>
 <hr>
-<button mat-button routerLink="/" (click)="addCard()">Добавить в коризну</button>
+<button mat-button routerLink="/" (click)="addCard()"
+        class="btn-addOrder">Добавить в коризну</button>
 
